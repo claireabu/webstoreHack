@@ -4,25 +4,31 @@
 		<title>WB_HACK</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<style type="text/css">
+
+			.body{
+
+			}
 			
 			li.cLi{
 				display: inline-block;
-				margin: 20px;
+				padding-left: 20px;
+				padding-right: 20px;
+				margin:20px;
 			}
+			
 			div.bookProd{
 				display: inline-block;
-				
 				text-align: center; 
-				padding-left: 50px;
-				padding-right: 50px;
-				margin: 0 auto;
-
 			}
+
 			.cover{
 				width: 150px;
 				height: 245px;
 				border: solid black 1px;
+			}
 
+			sellingpts li{
+				display: none; 
 			}
 			
 
@@ -33,18 +39,17 @@
 		<div class = 'container'>
 			<h1>Welcome to Claire's Books</h1>
 			<nav class="navbar navbar-default"> 
-				<ul class = 'nav navbar-left' >
-					<li class = 'cLi'>Home</li>
-					<li class = 'cLi'>What's New</li>
-					<li class = 'cLi'>Shop</li>
-					<li class = 'cLi'>Cart</li>
-					<li class = 'cLi'>Account</li>
-					<li class = 'cLi'> Search</li>
-
+				<ul class = 'nav navbar-default' >
+					<li class = 'cLi'>Home</li>  
+					<li class = 'cLi'>What's New</li> 
+					<li class = 'cLi'>Shop</li>  
+					<li class = 'cLi'>Cart</li>  
+					<li class = 'cLi'>Account</li>  
+					<li class = 'cLi'> Search</li>		
 				</ul>
 			</nav>
 			<div class = 'row'>
-				<div id = 'GhostWritten' class='bookProd'>
+				<div id = 'GhostWritten' class='bookProd col-lg-3'>
 					<h3 class = 'name'> Name 1 </h3>
 					<img class = 'img-thumbnail cover'  src="">
 					<h4 class = 'category'> Category 1 </h4>
@@ -56,7 +61,7 @@
 					</ul>
 				</div>
 
-				<div id = 'tidy' class='bookProd'>
+				<div id = 'tidy' class='bookProd col-lg-3'>
 					<h3 class = 'name'>Name 2</h3>
 					<img class = 'img-thumbnail cover' src="">
 					<h4 class = 'category'> Category 2</h4>
@@ -67,7 +72,7 @@
 						<li> Point C</li>
 					</ul>
 				</div>
-				<div id = 'martian' class='bookProd'>
+				<div id = 'martian' class='bookProd col-lg-3'>
 					<h3 class = 'name'>Name 3</h3>
 					<img class = 'img-thumbnail cover' src="">
 					<h4 class = 'category'> Category 3</h4>
@@ -78,7 +83,7 @@
 						<li> Point C</li>
 					</ul>
 				</div>
-				<div id = 'vice' class='bookProd'>
+				<div id = 'vice' class='bookProd col-lg-3'>
 					<h3 class = 'name'>Name 4</h3>
 					<img class = 'img-thumbnail cover' src="">
 					<h4 class = 'category'> Category 4</h4>
