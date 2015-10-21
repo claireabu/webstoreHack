@@ -3,76 +3,7 @@
 	<head>
 		<title>WB_HACK</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<style type="text/css">
-			h1{
-				padding:10px;
-			}
-			li.cLi{
-				display: inline-block;
-				padding-left: 20px;
-				padding-right: 20px;
-				margin:10px;
-			}
-			
-			div.bookProd{
-				display: inline-block;
-				text-align: center; 
-			}
-			div.musicProd{
-				display: inline-block;
-				text-align: center; 
-			}
-
-			.name{
-				text-align: center;
-				font-size: 20px; 
-				margin-bottom: 5px;
-			}
-
-			.cover{
-				width: 150px;
-				height: 245px;
-				border: solid black 1px;
-				margin: 0px auto;
-			}
-
-			.category{
-				text-align: center; 
-				margin-top: 5px;
-			}
-
-			.price{
-				text-align: center; 
-				margin-top: 1px;
-				font-size: 10px; 
-			}
-
-			.sellingpts{
-				padding: 5px;
-				margin-top: 5px;
-				font-style: italic;
-			}
-
-			.sellingpts ul{
-				
-			}
-			.sellingpts li{
-				list-style-type: none;
-				text-align: center;
-				margin: 0px auto;
-				font-size: small;  				
-			}
-
-			footer{
-				margin: 0px auto;
-				margin-top: 20px;
-				padding: 5px;
-				border-top: 1px gray solid;
-			}
-			
-
-
-		</style>
+		<link rel="stylesheet" type="text/css" href="wb.css">
 	</head>
 	<body>
 		<div class = 'container'>
@@ -96,7 +27,7 @@
 			<div class = 'row books'>
 				<div id = 'ghost' class='bookProd col-lg-3'>
 					<div class = 'name'> Book 1 </div>
-					<div class = 'cover'>  </div>
+					<div class = 'cover'> <img class = 'img-thumbnail'src=""> </div>
 					<div class = 'category'> Category 1 </div>
 					<div class = 'price'> $Price 1</div>
 					<div class = 'sellingpts'>
@@ -106,7 +37,7 @@
 
 				<div id = 'tidy' class='bookProd col-lg-3'>
 					<div class = 'name'>Book 2</div>
-					<div class = 'cover'> </div>
+					<div class = 'cover'> <img class = 'img-thumbnail'src=""> </div>
 					<div class = 'category'> Category 2</div>
 					<div class = 'price'> $Price 2</div>
 					<div class = 'sellingpts'>
@@ -115,7 +46,7 @@
 				</div>
 				<div id = 'darkside' class='musicProd col-lg-3'>
 					<div class = 'name'> Album 1 </div>
-					<div class = 'cover'></div>
+					<div class = 'cover'> <img class = 'img-thumbnail'src=""> </div>
 					<div class = 'category'> Category 1 </div>
 					<div class = 'price'> $Price 1</div>
 					<div class = 'sellingpts'>
@@ -125,7 +56,7 @@
 
 				<div id = 'settle' class='musicProd col-lg-3'>
 					<div class = 'name'>Album 2</div>
-					<div class = ' cover'> </div> 
+					<div class = 'cover'> <img class = 'img-thumbnail'src=""> </div>
 					<div class = 'category'> Category 2</div>
 					<div class = 'price'> $Price 2</div>
 					<div class = 'sellingpts'>
@@ -149,43 +80,64 @@
 			</footer>
 		</div>
 		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-		<script type="text/javascript">
-			//make nav active for page you are on 
-			// var books = {}; 
-			// var albums = {}; 
-			var ghost = {
-				name: 'Ghost Written', 
-				category: 'Fiction',
-				picture_url: 'http://www.xray867.server4you.net/system/hd_covers/000/007/689/original/9780340739754.jpg?1391438776', 
-				price: 10, 
-				selling_points: ['Magical Realism across the globe', 'Short stories all woven together', 'Travel the world through David Mitchell\'s vision']
-			};
-			var tidy = {
-				name: 'The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing', 
-				category: 'Homecare', 
-				picture_url: 'http://s3.amazonaws.com/media.wbur.org/wordpress/11/files/2014/12/1209_kondo-bookCover.jpg', 
-				price: 15, 
-				selling_points: ['Best-selling guide to decluttering your home', 'From Japanese cleaning consultant who\'s customers have never relapsed', 'Learn the legendary KonMari Method for simplifying, organizing, and storing']
-			};
-			var darkside = {
-				name: 'The Dark Side of the Moon', 
-				category: 'Progressive rock', 
-				picture_url: 'https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png', 
-				price: 17, 
-				selling_points: ['Complex, revolutionary album', 'One contiguous song', 'One of the greatest albums of all time']
+		<script src="wb.js"></script>
 
-			}; 
-			var settle = {
-				name: 'Settle', 
-				category: 'House', 
-				picture_url: 'https://upload.wikimedia.org/wikipedia/en/7/76/Disclosure_-_Settle.png', 
-				price: 17, 
-				selling_points: ['Brings back intelligence to joyous dance-pop', 'Advanced rhythm combinations and soulful R&B vocal samples', 'There\'s not a song on here you can\'t jam to']
+		// <script type="text/javascript">
+		// 	//make nav active for page you are on 
+		// 	// var books = {}; 
+		// 	// var albums = {}; 
+		// 	var ghost = {
+		// 		name: 'Ghost Written', 
+		// 		category: 'Fiction',
+		// 		picture_url: 'http://www.xray867.server4you.net/system/hd_covers/000/007/689/original/9780340739754.jpg?1391438776', 
+		// 		price: 10, 
+		// 		selling_points: ['Magical Realism across the globe', 'Short stories all woven together', 'Travel the world through David Mitchell\'s vision']
+		// 	};
+		// 	var tidy = {
+		// 		name: 'The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing', 
+		// 		category: 'Homecare', 
+		// 		picture_url: 'http://s3.amazonaws.com/media.wbur.org/wordpress/11/files/2014/12/1209_kondo-bookCover.jpg', 
+		// 		price: 15, 
+		// 		selling_points: ['Best-selling guide to decluttering your home', 'From Japanese cleaning consultant who\'s customers have never relapsed', 'Learn the legendary KonMari Method for simplifying, organizing, and storing']
+		// 	};
+		// 	var darkside = {
+		// 		name: 'The Dark Side of the Moon', 
+		// 		category: 'Progressive rock', 
+		// 		picture_url: 'https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png', 
+		// 		price: 17, 
+		// 		selling_points: ['Complex, revolutionary album', 'One contiguous song', 'One of the greatest albums of all time']
 
-			}; 
+		// 	}; 
+		// 	var settle = {
+		// 		name: 'Settle', 
+		// 		category: 'House', 
+		// 		picture_url: 'https://upload.wikimedia.org/wikipedia/en/7/76/Disclosure_-_Settle.png', 
+		// 		price: 17, 
+		// 		selling_points: ['Brings back intelligence to joyous dance-pop', 'Advanced rhythm combinations and soulful R&B vocal samples', 'There\'s not a song on here you can\'t jam to']
+
+		// 	}; 
+
+		// 	for(var key in ghost){
+		// 		if(key === name){
+
+		// 		}else if(key===category){
+
+		// 		}else if(key=== picture_url){
+
+		// 		}else if(key === price){
+
+		// 		}else{
+
+		// 		}
+		// 	}	
+
+			//add name 
+			//add category 
+			//add image 
+			//price 
+			//add selling points
 
 
 
-		</script>
 	</body>
 </html>
