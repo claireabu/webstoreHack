@@ -4,10 +4,6 @@
 		<title>WB_HACK</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<style type="text/css">
-
-			.body{
-
-			}
 			
 			li.cLi{
 				display: inline-block;
@@ -27,8 +23,20 @@
 				border: solid black 1px;
 			}
 
-			sellingpts li{
-				display: none; 
+			.sellingpts{
+				padding: 0px;
+			}
+			.sellingpts li{
+				list-style-type: none;
+				text-align: center;
+				margin: 0px auto; 
+			}
+
+			footer{
+				margin: 0px auto;
+				padding: 10px;
+
+
 			}
 			
 
@@ -38,11 +46,17 @@
 	<body>
 		<div class = 'container'>
 			<h1>Welcome to Claire's Books</h1>
-			<nav class="navbar navbar-default"> 
+			<nav class="navbar navbar-default "> 
+<!-- 				<div class="navbar-header">
+				      <a class="navbar-brand" href="#">
+				        <img alt="Brand" src="...">
+				      </a>
+				</div> -->
 				<ul class = 'nav navbar-default' >
 					<li class = 'cLi'>Home</li>  
 					<li class = 'cLi'>What's New</li> 
-					<li class = 'cLi'>Shop</li>  
+					<li class = 'cLi navbar-link'><a href="wb.html">Books</a></li>  
+					<li class = 'cLi'>Music</li> 
 					<li class = 'cLi'>Cart</li>  
 					<li class = 'cLi'>Account</li>  
 					<li class = 'cLi'> Search</li>		
@@ -95,13 +109,13 @@
 					</ul>
 				</div>
 			</div>
-			
-			<div id ='foot'>
-				<footer>Claire's Webstore </footer>
 			</div>
+		<div id ='foot'>
+			<footer>Claire's Webstore </footer>
 		</div>
 		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 		<script type="text/javascript">
+			//make nav active for page you are on 
 		</script>
 	</body>
 </html>
