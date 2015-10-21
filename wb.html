@@ -23,20 +23,29 @@
 				text-align: center; 
 			}
 
+			.name{
+				text-align: center;
+			}
+
+			.category{
+				text-align: center; 
+			}
+
 
 			.cover{
 				width: 150px;
 				height: 245px;
 				border: solid black 1px;
+				margin: 0px auto;
 			}
 
-			.sellingpts{
+			.sellingpts ul{
 				padding: 0px;
 			}
 			.sellingpts li{
 				list-style-type: none;
 				text-align: center;
-				margin: 0px auto; 
+				margin: 0px auto; 				
 			}
 
 			footer{
@@ -70,51 +79,59 @@
 				</ul>
 			</nav>
 			<div class = 'row books'>
-				<div id = 'GhostWritten' class='bookProd col-lg-3'>
-					<h3 class = 'name'> Book 1 </h3>
-					<img class = 'img-thumbnail cover'  src="">
-					<h4 class = 'category'> Category 1 </h4>
-					<h4 class = 'price'> $Price 1</h4>
-					<ul class = 'sellingpts'>
-						<li> Point A </li>
-						<li> Point B </li>
-						<li> Point C</li>
-					</ul>
+				<div id = 'ghost' class='bookProd col-lg-3'>
+					<div class = 'name'> Book 1 </div>
+					<div class = 'cover'>  </div>
+					<div class = 'category'> Category 1 </div>
+					<div class = 'price'> $Price 1</div>
+					<div class = 'sellingpts'>
+						<ul>
+							<li> Point A </li>
+							<li> Point B </li>
+							<li> Point C</li>
+						</ul>
+					</div>
 				</div>
 
-				<div id = 'vice' class='bookProd col-lg-3'>
-					<h3 class = 'name'>Book 2</h3>
-					<img class = 'img-thumbnail cover' src="">
-					<h4 class = 'category'> Category 2</h4>
-					<h4 class = 'price'> $Price 2</h4>
-					<ul class = 'sellingpts'>
-						<li> Point A </li>
-						<li> Point B </li>
-						<li> Point C</li>
-					</ul>
+				<div id = 'tidy' class='bookProd col-lg-3'>
+					<div class = 'name'>Book 2</div>
+					<div class = 'cover'> </div>
+					<div class = 'category'> Category 2</div>
+					<div class = 'price'> $Price 2</div>
+					<div class = 'sellingpts'>
+						<ul>
+							<li> Point A </li>
+							<li> Point B </li>
+							<li> Point C</li>
+						</ul>
+					</div>
 				</div>
 				<div id = 'darkside' class='musicProd col-lg-3'>
-					<h3 class = 'name'> Album 1 </h3>
-					<img class = 'img-thumbnail cover'  src="">
-					<h4 class = 'genre'> Category 1 </h4>
-					<h4 class = 'price'> $Price 1</h4>
-					<ul class = 'sellingpts'>
-						<li> Point A </li>
-						<li> Point B </li>
-						<li> Point C</li>
-					</ul>
+					<div class = 'name'> Album 1 </div>
+					<div class = 'cover'></div>
+					<div class = 'category'> Category 1 </div>
+					<div class = 'price'> $Price 1</div>
+					<div class = 'sellingpts'>
+						<ul>
+							<li> Point A </li>
+							<li> Point B </li>
+							<li> Point C</li>
+						</ul>
+					</div>
 				</div>
 
-				<div id = 'killbillvol2' class='musicProd col-lg-3'>
-					<h3 class = 'name'>Album 2</h3>
-					<img class = 'img-thumbnail cover' src="">
-					<h4 class = 'genre'> Category 2</h4>
-					<h4 class = 'price'> $Price 2</h4>
-					<ul class = 'sellingpts'>
-						<li> Point A </li>
-						<li> Point B </li>
-						<li> Point C</li>
-					</ul>
+				<div id = 'settle' class='musicProd col-lg-3'>
+					<div class = 'name'>Album 2</div>
+					<div class = ' cover'> </div> 
+					<div class = 'category'> Category 2</div>
+					<div class = 'price'> $Price 2</div>
+					<div class = 'sellingpts'>
+						<ul>
+							<li> Point A </li>
+							<li> Point B </li>
+							<li> Point C</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -135,20 +152,43 @@
 		<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 		<script type="text/javascript">
 			//make nav active for page you are on 
+			// var books = {}; 
+			// var albums = {}; 
+			var book1 = {
+				name: 'Ghost Written', 
+				category: 'Fiction',
+				picture_url: 'http://www.xray867.server4you.net/system/hd_covers/000/007/689/original/9780340739754.jpg?1391438776', 
+				price: 10, 
+				selling_points: ['Magical Realism across the globe', 'Short stories all woven together', 'Travel the world through David Mitchell\'s vision']
+			};
+			var book2 = {
+				name: 'The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing', 
+				category: 'Homecare', 
+				picture_url: 'http://s3.amazonaws.com/media.wbur.org/wordpress/11/files/2014/12/1209_kondo-bookCover.jpg', 
+				price: 15, 
+				selling_points: ['Best-selling guide to decluttering your home', 'From Japanese cleaning consultant who\'s customers have never relapsed', 'Learn the legendary KonMari Method for simplifying, organizing, and storing']
+			};
+			var album1 = {
+				name: 'The Dark Side of the Moon', 
+				category: 'Progressive rock', 
+				picture_url: 'https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png', 
+				price: 17, 
+				selling_points: ['Complex, revolutionary album', 'One contiguous song', 'One of the greatest albums of all time']
+
+			}; 
+			var album2 = {
+				name: 'Settle', 
+				category: 'House', 
+				picture_url: 'https://upload.wikimedia.org/wikipedia/en/7/76/Disclosure_-_Settle.png', 
+				price: 17, 
+				selling_points: ['Brings back intelligence to joyous dance-pop', 'Advanced rhythm combinations and soulful R&B vocal samples', 'There\'s not a song on here you can\'t jam to']
+
+			}; 
+
+			//h3 for name 
+			//h4 for category and price 
+
+
 		</script>
 	</body>
 </html>
-
-
-<!-- <div id = 'book1'>
-	<h3 id = 'name'> GhostWritten</h3>
-	<img class = 'img-thumbnail' id = 'picture' src="http://www.xray867.server4you.net/system/hd_covers/000/007/689/original/9780340739754.jpg?1391438776">
-	<h4 id = 'category'>Fiction</h4>
-	<h4 id = 'price'>$15</h4>
-	<ul id = 'sellingpts'>
-		<li>Magical Realism across the globe </li>
-		<li>Short stories all woven together </li>
-		<li>Travel the world through David Mitchell's world</li>
-	</ul>
-</div>
- -->
