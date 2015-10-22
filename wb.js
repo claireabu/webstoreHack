@@ -5,13 +5,14 @@ var ghost = {
 	price: 10, 
 	selling_points: ['Magical Realism across the globe', 'Short stories all woven together', 'Travel the world through David Mitchell\'s vision']
 };
-var tidy = {
-	name: 'The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing', 
-	category: 'Homecare', 
-	picture_url: 'http://s3.amazonaws.com/media.wbur.org/wordpress/11/files/2014/12/1209_kondo-bookCover.jpg', 
+var vice = {
+	name: 'Inherent Vice', 
+	category: 'Psychedlic Noir', 
+	picture_url: 'https://upload.wikimedia.org/wikipedia/en/3/3c/Inherent_Vice_film_poster.jpg', 
 	price: 15, 
-	selling_points: ['Best-selling guide to decluttering your home', 'From Japanese cleaning consultant who\'s customers have never relapsed', 'Learn the legendary KonMari Method for simplifying, organizing, and storing']
-};
+	selling_points: ['Part noir, part psychedelic romp', 'a simple shaggy-dog detective story', 'Pynchon Lite']
+}
+
 var darkside = {
 	name: 'The Dark Side of the Moon', 
 	category: 'Progressive rock', 
@@ -29,25 +30,74 @@ var settle = {
 
 }; 
 
-	$(#ghost).text(ghost.name)
-for(var key in ghost){
+var res = "";
 
 
-	if(key === 'name'){
-		console.log(key, ghost[key]); 
+//update ghost
+// $('#ghost .name').text(ghost.name); 
+// $('#ghost .category').text(ghost.category); 
+// $('#ghost .price').text('$' + ghost.price); 
+// $('#ghost img').attr('src', ghost.picture_url);
+
+// ghost.selling_points.forEach(function(elem){
+// 	res = res + elem + '. '
+// })
+// $('#ghost .sellingpts').text(res)
+// res = "";
 
 
-	}else if(key === 'category'){
-		console.log(key, ghost[key]); 
+//update vice
+$('#vice .name').text(vice.name); 
+$('#vice .category').text(vice.category); 
+$('#vice .price').text('$' + vice.price); 
+$('#vice img').attr('src', vice.picture_url);
+vice.selling_points.forEach(function(elem){
+	res = res + elem + '. '
+})
+$('#vice .sellingpts').text(res)
+res = "";
 
-	}else if(key === 'picture_url'){
-		console.log(key, ghost[key]); 
+//update darkside
+$('#darkside .name').text(darkside.name); 
+$('#darkside .category').text(darkside.category); 
+$('#darkside .price').text('$' + darkside.price); 
+$('#darkside img').attr('src', darkside.picture_url);	
+darkside.selling_points.forEach(function(elem){
+	res = res + elem + '. '
+})
+$('#darkside .sellingpts').text(res)
+res = "";
 
-	}else if(key === 'price'){
-		console.log(key, ghost[key]); 
 
-	}else{
-		console.log(key, ghost[key]); 
-		
-	}
-}	
+//settle
+$('#settle .name').text(settle.name); 
+$('#settle .category').text(settle.category); 
+$('#settle .price').text('$' + settle.price); 
+$('#settle img').attr('src', settle.picture_url);
+settle.selling_points.forEach(function(elem){
+	res = res + elem + '. '
+})
+$('#settle .sellingpts').text(res)
+res = "";	
+
+//Refactor your code so that you can call a function add_to_page(book1), passing in an object, 
+//and that object will be placed using jQuery into the html page. Now you should just call add_to_page 
+//for each product and the add_to_page function will place it on the page for you.
+
+var add_to_page = function (obj) {
+	var id = obj.name;
+	console.log(obj.name); 
+	$('#'+ id + ' .name').text(obj.name.name); 
+	$('#'+ id + ' .category').text(obj.name.category); 
+	$('#'+ id + ' .price').text('$' + obj.name.price); 
+	$('#'+ id + ' img').attr('src', obj.name.picture_url);
+	id.selling_points.forEach(function(elem){
+		res = res + elem + '. '
+	})
+	$('#'+ obj.name + '  .sellingpts').text(res)
+	res = "";	
+
+}
+
+
+add_to_page(ghost); 

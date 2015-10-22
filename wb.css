@@ -10,24 +10,30 @@ li.cLi{
 
 div.bookProd{
 	display: inline-block;
-	text-align: center; 
+	text-align: center;
+	margin:  auto;
 }
 div.musicProd{
 	display: inline-block;
 	text-align: center; 
+	margin:  auto;
 }
 
 .name{
 	text-align: center;
 	font-size: 20px; 
 	margin-bottom: 5px;
+	margin-top:10px;
 }
 
 .cover{
-	width: 150px;
-	height: 245px;
-	border: solid black 1px;
+	max-width: 150px;
+	height: auto;
 	margin: 0px auto;
+}
+
+.musicProd img{
+	margin-top:15%;
 }
 
 .category{
